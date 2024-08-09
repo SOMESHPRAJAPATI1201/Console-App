@@ -51,7 +51,7 @@ public class UserMethods {
 						getInstructions("update");
 						str = sc.nextLine().trim();
 						switch (str) {
-						
+
 						// update name
 						case "1":
 							updateName(sc, userList, i);
@@ -61,7 +61,7 @@ public class UserMethods {
 						case "2":
 							updateEmail(sc, userList, i);
 							break;
-							
+
 						// update phone
 						case "3":
 							updatePhone(sc, userList, i);
@@ -94,7 +94,7 @@ public class UserMethods {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// create
 	public static void createUser(Scanner sc, List<UserDTO> userList) {
 		System.out.println("User Register Command");
@@ -198,10 +198,6 @@ public class UserMethods {
 		}
 	}
 
-	
-	
-	
-	
 	// recallableMethods
 	public static void getInstructions(String ins) {
 		if (ins.equalsIgnoreCase("main")) {
@@ -230,7 +226,7 @@ public class UserMethods {
 	}
 
 	public static void printAllUserData(List<UserDTO> userList) {
-		userList.forEach(t -> printUserDetails(t) );
+		userList.forEach(t -> printUserDetails(t));
 		System.out.println("------------------------------------------------");
 
 	}
@@ -256,7 +252,7 @@ public class UserMethods {
 			System.out.println("New Email Updated Successfully");
 			return true;
 		} else {
-			System.err.println("Invalid Email");
+			System.err.println("Invalid Email ");
 			return false;
 		}
 	}
@@ -271,7 +267,6 @@ public class UserMethods {
 				userList.get(i).setPhone(oldPhone.trim(), newPhone.trim());
 				System.out.println("Phone Updated Successfully");
 				return true;
-
 			} else {
 				System.err.println("Invalid Phone");
 				return false;
